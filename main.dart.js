@@ -100955,7 +100955,7 @@ this.a.m(0,a,s)},
 $S:27}
 A.aOV.prototype={
 $2(a,b){var s=A.AD(t.P.a(b))
-if(s.b<0.001)return
+if(Math.abs(s.b)<0.001)return
 this.a.m(0,a,s)},
 $S:27}
 A.aPb.prototype={
@@ -103007,7 +103007,7 @@ $S:0}
 A.aPH.prototype={
 $2(a,b){var s=this.a,r=J.aR(b,s)
 if(r==null)r=B.a27
-if(r.geT()<0.001||r.geT()<=0)return
+if(Math.abs(r.geT())<0.001||r.geT()<=0)return
 this.b.push(new A.iW(this.c,s,r,a))},
 $S:266}
 A.aPG.prototype={
@@ -103015,7 +103015,7 @@ $2(a,b){J.eI(b,new A.aPF(this.a,a))},
 $S:266}
 A.aPF.prototype={
 $2(a,b){var s,r,q
-if(b.geT()<0.001)return
+if(Math.abs(b.geT())<0.001)return
 s=b.geT()<0
 r=s?a:B.P.cB()
 q=s?B.P.cB():a
@@ -103031,7 +103031,7 @@ $S:667}
 A.RP.prototype={
 I(){return"CollectionType."+this.b}}
 A.aPJ.prototype={
-$2(a,b){return b<0.001},
+$2(a,b){return Math.abs(b)<0.001},
 $S:668}
 A.aPK.prototype={
 $2(a,b){var s=this.b
@@ -104518,7 +104518,7 @@ q=A.bn(a,j,t.w).w.a.a*0.1
 p=k.d
 o=A.vW(p,k.e)
 n=k.f
-if(n<0.001){m=A.p(a).ok.z
+if(Math.abs(n)<0.001){m=A.p(a).ok.z
 m=A.ap("Select balances below!",j,j,j,j,m==null?j:m.aV(A.p(a).ax.b),j,j,j)}else{m=$.t0()
 m=m.f8(n)
 l=A.p(a).ok.y
@@ -105153,7 +105153,7 @@ return}o.gM().jx(0)
 o=q.gL8()
 s=q.a
 r=s.f.a
-if(!(Math.abs(o.a-r)<0.001)){o=A.dP(r,s.r,!1)
+if(!(Math.abs(Math.abs(o.a-r))<0.001)){o=A.dP(r,s.r,!1)
 s=q.gI4().a>0?"short":"over"
 A.i7(new A.aIT(),!1,A.ap("The total amount should add up to "+o+"! You are currently "+s+" by "+A.dP(Math.abs(q.gI4().a),q.a.r,!1)+".",p,p,p,p,p,p,p,p),a,B.cm)
 return}s.He(q.w)
